@@ -1,0 +1,5 @@
+mysql:
+  host: localhost
+  username: root
+  passsword: root
+  database: ruby_class
