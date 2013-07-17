@@ -1,5 +1,5 @@
 mysql:
-  host: localhost
-  username: root
-  passsword: root
-  database: ruby_class
+  host: 127.12.253.129
+  username: jeremynolantx
+  passsword: 
+  database: ruby_training

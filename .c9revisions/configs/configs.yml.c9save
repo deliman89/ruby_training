@@ -1,2 +1,4 @@
 {"ts":1374024555570,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
 {"contributors":[],"silentsave":false,"ts":1374024601432,"patch":[[{"diffs":[[1,"mysql:\n  host: localhost\n  username: root\n  passsword: root\n  database: ruby_class"]],"start1":0,"start2":0,"length1":0,"length2":82}]],"length":82,"saved":false}
+{"ts":1374027107331,"patch":[[{"diffs":[[0,"st: "],[-1,"localhost"],[1,"127.12.253.129"],[0,"\n  u"]],"start1":11,"start2":11,"length1":17,"length2":22}]],"length":87,"saved":false}
+{"ts":1374027148063,"patch":[[{"diffs":[[0,"ername: "],[-1,"root"],[1,"jeremynolantx"],[0,"\n  passs"]],"start1":34,"start2":34,"length1":20,"length2":29},{"diffs":[[0,"rd: "],[-1,"root"],[0,"\n  d"]],"start1":65,"start2":65,"length1":12,"length2":8},{"diffs":[[0,"uby_"],[-1,"class"],[1,"training"]],"start1":83,"start2":83,"length1":9,"length2":12}]],"length":95,"saved":false}
