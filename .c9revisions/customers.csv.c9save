@@ -1,2 +1,3 @@
-{"ts":1374024490703,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"contributors":[],"silentsave":false,"ts":1374024538285,"patch":[[{"diffs":[[1,"First Name, Last Name, Date of Birth, Age\nSteven,Arsena,12/19/1988,24\nAaron,Kirby,08/01/1989,23\nPatrick,Nolan,03/26/1989,24"]],"start1":0,"start2":0,"length1":0,"length2":123}]],"length":123,"saved":false}
+{"ts":1374028602046,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"First Name, Last Name, Date of Birth, Age\nSteven,Arsena,12/19/1988,24\nAaron,Kirby,08/01/1989,23\nPatrick,Nolan,03/26/1989,24"]],"start1":0,"start2":0,"length1":0,"length2":123}]],"length":123}
+{"contributors":[],"silentsave":false,"ts":1374116276189,"patch":[[{"diffs":[[0,"9,23\nPat"],[1,"'"],[0,"rick,Nol"]],"start1":91,"start2":91,"length1":16,"length2":17}]],"length":124,"saved":false}
+{"ts":1374116544746,"patch":[[{"diffs":[[0,"\nPat"],[-1,"'"],[0,"rick"]],"start1":95,"start2":95,"length1":9,"length2":8}]],"length":123,"saved":false}

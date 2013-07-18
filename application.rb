@@ -12,36 +12,24 @@ p files
 client.query("Truncate table Customers")
 begin
   files.each { |file|
-  p file
+    p file
+    client.query "BEGIN"
     CSV.foreach(file, :headers => :first_row) { |record|
       p record
       fname = record[0]
       lname = record[1]
       dob = FormatDate.new(record[2]).newMethod
-      #dob = Date.strptime(record[2], "%m/%d/%Y").strftime("%Y-%m-%d")
       age = record[3]
-      #p "#{fname}, #{lname}, #{dob}, #{age}"
       client.query "Insert into Customers Values('#{fname}', '#{lname}', '#{age}', '#{dob}', '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}')"
     }
-    # File.readlines("customers.txt").map { |records|
-    #   records = records.gsub("\n", "")
-    #   records = records.split(",")
-    #   fname = records[0]
-    #   lname = records[1]
-    #   dob = Date.strptime(records[2], "%m/%d/%Y").strftime("%Y-%m-%d")
-    #   age = records[3]
-    #   client.query "Insert into Customers Values('#{fname}', '#{lname}', '#{age}', '#{dob}', '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}')"
-    # }
   }
+  client.query "Insert into Logs values('Customers Load', '', 'Success', '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}')"
+  files.each{|file| FileUtils.mv(file, "backups/")}
 rescue Exception => e
   $message = e.message
-  exit
+  client.query "ROLLBACK"
+  client.query "Insert into Logs values('Customers Load', '#{$message.gsub("'","''")}', 'Failed', '#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}')"
+ensure
+  client.query "COMMIT"    
 end
 
-# if $message == nil
-  files.each{|file| FileUtils.mv(file, "backups/")}
-# end
-# alert = []
-# alert << "Hello"
-
-# p alert
